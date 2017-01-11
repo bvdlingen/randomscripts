@@ -1,12 +1,15 @@
+# speed_cli.py has been depricated
+# wget https://raw.github.com/sivel/speedtest-cli/master/speedtest_cli.py
+# replaced by new version
 
-wget https://raw.github.com/sivel/speedtest-cli/master/speedtest_cli.py
-chmod a+rx speedtest_cli.py
-mv speedtest_cli.py /usr/local/bin/speedtest-cli
-chown root:root /usr/local/bin/speedtest-cli
-speedtest-cli
-speedtest-cli --server 3386
+#get
+wget https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py
 
+#set
+chmod a+rx speedtest.py
+mv speedtest.py /usr/local/bin/speedtest
+chown root:root /usr/local/bin/speedtest
 
-
-
-
+#run
+speedtest
+speedtest --server 3386
