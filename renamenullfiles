@@ -1,0 +1,13 @@
+#!/bin/sh
+#
+# some (+/-1%) pix from iPhoto are uploaded to NextCloud with a .(null) extention. This script renames the files to .jpg files.
+#
+# syntax test:  ls *"(null)" 
+
+# Rename all *.(null) to *.jpg
+for f in *."(null)"; do 
+mv -- "$f" "${f%."(null)"}.jpg"
+
+
+echo done
+done
