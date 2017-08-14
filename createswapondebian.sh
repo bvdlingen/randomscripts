@@ -1,5 +1,9 @@
-#forgot to configure a swap file?
-# this script configures a swap file afterwards
+#!/bin/sh
+
+# forgot to configure a swap file? This often causes your vps to hang.
+# This script configures a swap file afterwards
+
+# tested on debian, but should work everywhere
 
 fallocate -l 1G /mnt/1GB.swap
 mkswap /mnt/1GB.swap
