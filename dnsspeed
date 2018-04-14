@@ -1,0 +1,3 @@
+#simple syntax to test dns response speeds
+
+while true; do dig digg.com @1.1.1.1 | grep time; sleep 2; done
