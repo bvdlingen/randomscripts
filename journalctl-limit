@@ -1,0 +1,9 @@
+#not a script, merely a note to self
+
+sudo journalctl --disk-usage 
+
+#limit using
+sudo journalctl --vacuum-time=1month
+
+#or
+sudo journalctl --vacuum-time=1month
