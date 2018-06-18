@@ -1,4 +1,4 @@
- # source https://forum.synology.com/enu/viewtopic.php?t=121532
+ # read https://forum.synology.com/enu/viewtopic.php?t=121532
  
  
 echo 16384 >/sys/block/md2/md/stripe_cache_size
