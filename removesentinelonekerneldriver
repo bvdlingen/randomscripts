@@ -1,0 +1,11 @@
+
+# Boot your Mac directly in Recovery OS
+
+# In Recovery OS, chroot to your system volume. 
+# May also need to unlock it first.
+# this example assumes your volume label is "Macintosh HD"
+
+# run the following commands:
+
+chroot /Volumes/Macintosh\ HD/
+rm -rf /Library/Extensions/Sentinel.kext
