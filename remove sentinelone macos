@@ -1,6 +1,22 @@
  
 verwijderen sentinelone mac os x macos
 
+
+# Boot your Mac directly in Recovery OS
+
+# In Recovery OS, chroot to your system volume. 
+# May also need to unlock it first.
+# this example assumes your volume label is "Macintosh HD"
+# make sure the disk is mounted, will not be mounted automatically if disk encryption is used (which you should have)
+
+# run the following commands:
+
+chroot /Volumes/Macintosh\ HD/
+
+
+rm -rf /Library/Extensions/Sentinel.kext
+
+
 Command (⌘)-R: Start up from the built-in macOS Recovery system. 
 
 Or use Option-Command-R or Shift-Option-Command-R to start up from macOS Recovery over the Internet. macOS Recovery installs different versions of macOS, depending on the key combination you use while starting up. If your Mac is using a firmware password, you're asked to enter the password.
