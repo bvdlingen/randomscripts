@@ -9,7 +9,7 @@ caveats:
 1. Will work if you know your way around
 2. not a complete removal.
 
-*Boot your Mac directly in Recovery OS
+* Boot your Mac directly in Recovery OS
 
 this example assumes your volume label is "Macintosh HD"
 You may need to unlock it first make sure the disk is mounted, will not be mounted automatically if disk encryption is used (which you should have)
