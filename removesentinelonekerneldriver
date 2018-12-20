@@ -4,8 +4,11 @@
 # In Recovery OS, chroot to your system volume. 
 # May also need to unlock it first.
 # this example assumes your volume label is "Macintosh HD"
+# make sure the disk is mounted, will not be mounted automatically if disk encryption is used (which you should have)
 
 # run the following commands:
 
 chroot /Volumes/Macintosh\ HD/
+
+
 rm -rf /Library/Extensions/Sentinel.kext
