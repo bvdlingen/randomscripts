@@ -2,6 +2,9 @@
 
 In case SentinelOne is causing issues, for example when you just upgraded your macbook, this procedure can be used to completely remove SentinerOne.
 
+Running mojave and Safari and system preferences are crashing?
+https://discussions.apple.com/thread/8553181
+
 Another use case could be when you can't remove SentinelOne the normal way. This happened me once running Mojave (uninstall started from management tooling, MacOS just reboots instantly).
 
 ## In a hurry?
