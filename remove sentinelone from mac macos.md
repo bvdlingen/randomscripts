@@ -1,11 +1,13 @@
 # remove SentinelOne from MacOS
 
-In case SentinelOne is causing issues, for example when you just upgraded your macbook, this procedure can be used to completely remove SentinerlOne.
-Another use case could be when you can't remove SentinelOne the normal way (uninstall started from management tooling, MacOS just reboots instantly)
+In case SentinelOne is causing issues, for example when you just upgraded your macbook, this procedure can be used to completely remove SentinerOne.
+
+Another use case could be when you can't remove SentinelOne the normal way. This happened me once running Mojave (uninstall started from management tooling, MacOS just reboots instantly).
 
 ## In a hurry?
 
-caveats:
+If you are in a hurry follow these steps.
+Caveats:
 1. Will work if you know your way around
 2. not a complete removal.
 
@@ -26,28 +28,23 @@ rm -rf /Library/Extensions/Sentinel.kext
 
 
 
-## Steps
+## Not in a hurry?
 ### Boot in recovery mode
-Boot the system in revocery mode 
-...
+* Boot the system in revocery mode 
+```
 Command (⌘)-R: Start up from the built-in macOS Recovery system. 
-...
+```
 Or 
-...
+```
 use Option-Command-R or Shift-Option-Command-R to start up from macOS Recovery over the Internet. macOS Recovery installs different versions of macOS, depending on the key combination you use while starting up. 
-...
+```
 
-selecteer disk utility
+* Select Disk utility
 https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macos/highsierra/macos-high-sierra-recovery-mode-reinstall.jpg
 
 mount / activeer disk
 
 sluit disk utility
-
-## Authors
-
-* **Bert van der Lingen 
-
 
 
 verwijderen sentinelone mac os x macos
@@ -193,3 +190,9 @@ rm -rf /Library/Sentinel/sentinel-agent.bundle/Contents/_CodeSignature/CodeSigna
 rm -rf /private/etc/asl/com.sentinelone.sentinel
 rm -rf /usr/local/share/man/man1/sentinelctl.1
 ```
+
+
+## Authors
+
+* **Bert van der Lingen 
+
