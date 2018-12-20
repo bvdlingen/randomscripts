@@ -156,7 +156,9 @@ nu kun je de services, drivers (kext) en agent componenten verwijderen
 ### Kernel extention removal
 This is in fact the only essential step
 (feitelijk is dit de belangrijkste, enige essentiele stap)
+
 ...
+
 rm -rf /Library/Extensions/Sentinel.kext
 rm -rf /Library/Extensions/Sentinel.kext/Contents
 rm -rf /Library/Extensions/Sentinel.kext/Contents/Info.plist
@@ -167,17 +169,24 @@ rm -rf /Library/Extensions/Sentinel.kext/Contents/Resources/en.lproj
 rm -rf /Library/Extensions/Sentinel.kext/Contents/Resources/en.lproj/InfoPlist.strings
 rm -rf /Library/Extensions/Sentinel.kext/Contents/_CodeSignature
 rm -rf /Library/Extensions/Sentinel.kext/Contents/_CodeSignature/CodeResources
+
 ...
 
 ### Remove the services
+
 ....
+
 launchctl remove com.sentinelone.sentineld-helper
 launchctl remove com.sentinelone.sentineld-updater
 launchctl remove com.sentinelone.sentineld
 launchctl remove com.sentinelone.sentineld-guard
+
 ...
+
 ### Agent removal and cleanup
+
 ...
+
 rm -rf /Library/LaunchAgents/com.sentinelone.agent.plist
 rm -rf /Library/LaunchDaemons/com.sentinelone.sentineld-guard.plist
 rm -rf /Library/LaunchDaemons/com.sentinelone.sentineld-helper.plist
@@ -261,4 +270,5 @@ rm -rf /Library/Sentinel/sentinel-agent.bundle/Contents/_CodeSignature/CodeResou
 rm -rf /Library/Sentinel/sentinel-agent.bundle/Contents/_CodeSignature/CodeSignature
 rm -rf /private/etc/asl/com.sentinelone.sentinel
 rm -rf /usr/local/share/man/man1/sentinelctl.1
+
 ...
