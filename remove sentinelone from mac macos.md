@@ -3,6 +3,29 @@
 In case SentinelOne is causing issues, for example when you just upgraded your macbook, this procedure can be used to completely remove SentinerlOne.
 Another use case could be when you can't remove SentinelOne the normal way (uninstall started from management tooling, MacOS just reboots instantly)
 
+## In a hurry?
+
+caveats:
+1. Will work if you know your way around
+2. not a complete removal.
+
+*Boot your Mac directly in Recovery OS
+
+this example assumes your volume label is "Macintosh HD"
+You may need to unlock it first make sure the disk is mounted, will not be mounted automatically if disk encryption is used (which you should have)
+
+
+* In Recovery OS, chroot to your system volume. 
+```
+chroot /Volumes/Macintosh\ HD/
+```
+* Now remove the kernel extention using this command:
+```
+rm -rf /Library/Extensions/Sentinel.kext
+```
+
+
+
 ## Steps
 ### Boot in recovery mode
 Boot the system in revocery mode 
@@ -20,112 +43,16 @@ https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macos/
 mount / activeer disk
 
 sluit disk utility
-### Prerequisites
-
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
-
-
-
-
-
-
-
-
+* **Bert van der Lingen 
 
 
 
 verwijderen sentinelone mac os x macos
 
 
-# Boot your Mac directly in Recovery OS
-
-# In Recovery OS, chroot to your system volume. 
-# May also need to unlock it first.
-# this example assumes your volume label is "Macintosh HD"
-# make sure the disk is mounted, will not be mounted automatically if disk encryption is used (which you should have)
-
-# run the following commands:
-
-chroot /Volumes/Macintosh\ HD/
-
-
-rm -rf /Library/Extensions/Sentinel.kext
 
 
 Command (⌘)-R: Start up from the built-in macOS Recovery system. 
