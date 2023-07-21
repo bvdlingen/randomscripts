@@ -1,13 +1,12 @@
 #!/bin/sh
-#
-# some (+/-1%) pix from iPhoto are uploaded to NextCloud with a .(null) extention. This script renames the files to .jpg files.
-#
-# syntax test:  ls *"(null)" 
 
-# Rename all *.(null) to *.jpg
-for f in *."(null)"; do 
-mv -- "$f" "${f%."(null)"}.jpg"
+# some (+/-1%) photos from iPhoto used to upload to NextCloud and OwnCloud with a .(null) extention. 
+# This script renames all files with the `.(null)` extension to `.jpg`.
 
-
-echo done
+for file in *."(null)"; do
+  # Rename the file in place.
+  mv -i "$file" "${file%."(null)"}.jpg"
 done
+
+echo "Done."
+
