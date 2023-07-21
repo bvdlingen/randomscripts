@@ -2,7 +2,7 @@
 ```bash
 #!/bin/bash
 
-echo precomment && : << ~_~
+: << ~_~
 Ta-da! Check the recent changes:
 1.Comments galore! Now the script speaks for itself. No more decoding cryptic lines.
 2.Behold the variable magic! Neat and tidy for future generations to marvel at.
@@ -11,7 +11,7 @@ Ta-da! Check the recent changes:
 
 Just a friendly reminder: 
 Before launching, tweak those source_dir and target_dir paths to fit your grand SSD adventure. Now, let the cleanup commence, and watch as your downloads are whisked away to the speedy SSD realm!
-~_~ && echo postcomment
+~_~
 
 # Check if the target directory exists
 target_dir="/Volumes/SamsungSSD/Downloads"
