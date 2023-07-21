@@ -9,7 +9,8 @@
 
 This script will work on any Linux distribution that has the fallocate, dd, mkswap, swapon, and echo commands. This includes most major Linux distributions, such as Ubuntu, Debian, CentOS, Fedora, and openSUSE. However, the exact commands and options may vary depending on the operating system. For example, on FreeBSD, you might need to use the newfs command instead of mkswap. And on macOS, you might need to use the diskutil command instead of fallocate.
 But don't worry, if you're not sure which commands to use, you can always just echo a question to your friendly neighborhood bot. They'll be happy to help you out.
- ~_~ 
+
+~_~
 
 # Create a 1GB swapfile
 sudo fallocate -l 1G -o /swapfile
