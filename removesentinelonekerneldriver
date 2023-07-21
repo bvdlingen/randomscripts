@@ -1,14 +1,32 @@
+ #!/bin/bash
 
-# Boot your Mac directly in Recovery OS
+# This script removes the `Sentinel.kext` file from the system volume.
 
-# In Recovery OS, chroot to your system volume. 
-# May also need to unlock it first.
-# this example assumes your volume label is "Macintosh HD"
-# make sure the disk is mounted, will not be mounted automatically if disk encryption is used (which you should have)
+# Set the volume label.
+volume_label="Macintosh HD"
 
-# run the following commands:
+# Boot the Mac directly in Recovery OS.
 
-chroot /Volumes/Macintosh\ HD/
+# Chroot to the system volume.
+chroot /Volumes/$volume_label/
 
+# Set -e to exit the script if any command fails.
+set -e
 
-rm -rf /Library/Extensions/Sentinel.kext
+# Prompt the user to confirm the volume label.
+echo "What is the volume label of your system volume?"
+read -r volume_label
+
+# Prompt the user to confirm before removing the `Sentinel.kext` file.
+echo "Are you sure you want to remove the `Sentinel.kext` file from the `"$volume_label"` volume?"
+read -r response
+if [[ $response != "yes" ]]; then
+  echo "Exiting..."
+  exit 1
+fi
+
+# Remove the `Sentinel.kext` file.
+sudo rm -rf /Library/Extensions/Sentinel.kext
+
+# Exit the chroot environment.
+exit
