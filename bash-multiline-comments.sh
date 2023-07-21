@@ -2,7 +2,7 @@
 
 : << ~_~
 
-In this file, comments are cleverly crafted using the `: << ~_~` block, resembling a magic incantation to keep text hidden from the prying eyes of the interpreter.
+In this file, comments are cleverly crafted using the `": << ~_~"` block, resembling a magic incantation to keep text hidden from the prying eyes of the interpreter.
 
 The benefits of this comment style include:
 1. Concealing lengthy or extensive passages, allowing the script to stay focused and concise.
