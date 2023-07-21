@@ -33,7 +33,7 @@ mkswap -v $swapfile
 chmod 600 $swapfile
 
 swapon $swapfile
-echo '$swapfile_path none  swap  sw 0  0' >> /etc/fstab
+printf '/mnt/%s  none  swap  sw 0  0' "$swapfile_path" >> /etc/fstab
 sysctl vm.swappiness=$vm_swappiness
 
 exit
