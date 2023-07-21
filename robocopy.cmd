@@ -1,20 +1,24 @@
 @echo off
 
-# /MIR: mirror directory option: it removes/purges files from the destination that no longer exist in the source
-# /MT: the multithreading option
-# /copy:DATSOU Copy Data, Attributes, Time Stamps, Security, Owner, aUditing information
-# /E Copy subdirectories recursively, (including empty ones.)
-# /ZB Use ‘restartable’ mode, and if this fails use ‘backup’ mode
-# /copy:DATSOU Copy Data, Attributes, Time Stamps, Security, Owner, aUditing information
-# /R:3 Retry three times, if you don’t specify this, it will retry one million times!
-# /W:3 Wait time between the retries above
-# /log Will output the log to the folder we created above
-# /V: output in verbose (detailed) mode
+rem This batch file copies the `FOLDER` directory from the `fs01\d$` volume to the `nas01\share` share.
 
-cls
-:start
-echo start 
+rem Define the source and destination folders.
+set source_folder="\\fs01\d$\FOLDER"
+set destination_folder="\\nas01\share"
 
-robocopy \\fs01\d$\FOLDER\ \\nas01\share\ /e /zb /copy:DATSOU /MIR /r:1 /w:1 /log:c:\users\%username%\desktop\robocopy\%date%.log /V /MT:32
+rem Enable delayed expansion.
+setlocal enabledelayedexpansion
 
-goto start
+rem Copy the files and directories recursively, including empty ones.
+rem Mirror the directory, removing/purging files from the destination that no longer exist in the source.
+rem Copy Data, Attributes, Time Stamps, Security, Owner, and Auditing information.
+rem Use restartable mode, and if this fails use backup mode.
+rem Retry three times, with a 1-second wait between retries.
+rem Output the log to the `robocopy` folder on the user's desktop.
+rem Output in verbose (detailed) mode.
+rem Use 32 threads to copy the files.
+robocopy /e /zb /copy:DATSOU /MIR /r:3 /w:1 /log:c:\users\%username%\desktop\robocopy\%date%.log /V /MT:32 ^
+  "%source_folder%" "%destination_folder%"
+
+rem Exit the batch file.
+goto eof
