@@ -1,8 +1,0 @@
-#!/bin/bash
-#cleanup my download dir
-
-if [ -d /Volumes/SamsungSSD/Downloads ]
-then
-    echo "Directory exists"
-    mv /Users/bvdl/Downloads/* /Volumes/SamsungSSD/Downloads/
-fi
