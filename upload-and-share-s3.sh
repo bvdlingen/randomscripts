@@ -1,5 +1,8 @@
 #!/bin/bash -e
 
+# Set the magical DNS name for sharing
+share_dns="share.vdl.io"
+
 # Usage info - This script is your loyal sidekick to process and share files like a pro!
 show_help() {
 cat << EOF
@@ -69,14 +72,14 @@ for src in "$@"; do
     echo "Whisking away $src to the mystical realm of $tmp/$date/$dst..."
     cp -v "$src" "$tmp/$date/$dst"
 
-    if aws s3 cp --storage-class STANDARD_IA --acl public-read "$tmp/$date/$dst" "s3://share.vdl.io/$date/"; then
-        echo "File successfully transported to: https://share.vdl.io/$date/$dst - Magical!"
+    if aws s3 cp --storage-class STANDARD_IA --acl public-read "$tmp/$date/$dst" "s3://$share_dns/$date/"; then
+        echo "File successfully transported to: https://$share_dns/$date/$dst - Magical!"
         if hash pbcopy 2>/dev/null; then
             echo "Sharing the link with your clipboard magic spell..."
-            echo "https://share.vdl.io/$date/$dst" | pbcopy
+            echo "https://$share_dns/$date/$dst" | pbcopy
         elif hash xclip 2>/dev/null; then
             echo "Enchanting the link into your clipboard using xclip magic..."
-            echo "https://share.vdl.io/$date/$dst" | xclip -selection "clipboard" -i
+            echo "https://$share_dns/$date/$dst" | xclip -selection "clipboard" -i
         else
             echo "No pbcopy or xclip spells found - You'll have to manually share the link."
         fi
