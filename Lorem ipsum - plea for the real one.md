@@ -29,16 +29,16 @@ Who doesn't love a little bit of pretentiousness? Cicero Ipsum lets you reach pe
 
 Remember those long-forgotten Latin classes in school? Cicero Ipsum is like a mini Latin lesson that brings back memories of your awkward attempts to decipher Virgil's poetry. It's like learning Latin the fun way, or at least trying to pretend you're learning something.
 
-So, dear reader, next time you're considering the blandness of "Lorem ipsum," let Cicero Ipsum be your guide. Revel in the elegance of ancient wisdom and embrace the quirks of classical humor. Go forth and conquer the world with the mighty power of Cicero Ipsum!
+So, dear reader, next time you're considering the blandness of "Lorem ipsum," let the original "Dolerem ipsum" from Cicero be your guide. Revel in the elegance of ancient wisdom and embrace the classics with some humor. Go forth and conquer the world with the mighty power of Dolerem ipsum!
 
 
 
-Original / real "Lorum ipsum" 
-It has been derived and editted from Cicero's 'De finibus bonorum et malorum' and actually starts with "Dolerem Ipsum":
+## "Dolerem ipsum" not "Lorum ipsum" 
+###From Cicero's 'De finibus bonorum et malorum:  
 
 Dolorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur? At vero eos et accusamus et iusto odio dignissimos ducimus, qui blanditiis praesentium voluptatum deleniti atque corrupti, quos dolores et quas molestias excepturi sint, obcaecati cupiditate non provident, similique sunt in culpa, qui officia deserunt mollitia animi, id est laborum et dolorum fuga. et harum quidem rerum facilis est et expedita distinctio. nam libero tempore, cum soluta nobis est eligendi optio, cumque nihil impedit, quo minus id, quod maxime placeat, facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet, ut et voluptates repudiandae sint et molestiae non recusandae. itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. 
 
-Rough english translation:
+##Rough english translation:
 
 Certainly, I will not be stubborn, and I will gladly agree with you if you prove to me the things you say. "I will prove them," he said, "as long as you are fair in the way you present them." But I prefer continuous speech rather than questioning or being questioned. "Agreed," I said. Then he began to speak.
 "First of all, I will act in a way that pleases the author of this discipline. I will establish what it is we seek, not because I think you are ignorant of it, but so that our speech may proceed logically and methodically. Therefore, we are seeking the ultimate and highest good, which, according to the opinions of all philosophers, should be such that everything else must be referred to it, but it is not itself referred to anything. This is what Epicurus places in pleasure, as he believes it to be the supreme good, and the greatest evil is pain. He sets out to teach this as follows:
