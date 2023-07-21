@@ -1,68 +1,86 @@
 #!/bin/bash -e
 
-# Magic Image Sharer!
+# Usage info - This script is your loyal sidekick to process and share files like a pro!
+show_help() {
+cat << EOF
+Usage: ${0##*/} [-hv] [-d date] [FILE]...
+Do awesome stuff with FILE and behold the magic! With no FILE
+or when FILE is -, prepare to be amazed by standard input.
 
-: << ~_~
-Usage info: Discover the hidden powers of this mystical script.
+    -h          show this incredible help and exit
+    -d date     choose a date other than today's date
+    -v          activate verbose mode. Use it multiple times for increasing awesomeness.
+EOF
+}
 
-- Use the -d flag to select your own date, bending time to your will.
-- Unleash the -v flag to summon verbosity and reveal the script's actions.
+# Initialize our own variables:
+verbose=0
+date=$(date +%Y-%m-%d)
 
-Mysterious Image Transformation:
-- PNG images undergo the quantization spell.
-- JPEG images bask in the glory of jpegoptim!
-
-Cloud Portals Unleashed:
-- AWS deities securely transfer your images to share.vdl.io.
-
-Bewitching Secrets:
-- With pbcopy or xclip, copy the secret sharing link to your clipboard!
-
-Gather your images, align the stars, and let this mystical script weave its wonders!
-But beware, sorcerer, tweak the source wisely before summoning its magic!
-~_~
+OPTIND=1
+while getopts "hvd:" opt; do
+    case "$opt" in
+        h)
+            show_help
+            exit 0
+            ;;
+        v)  verbose=$((verbose+1))
+            ;;
+        d)  date=$(date -d "$OPTARG" +%Y-%m-%d)
+            ;;
+        '?')
+            show_help >&2
+            exit 1
+            ;;
+    esac
+done
+shift "$((OPTIND-1))"
 
 tmp=$(mktemp -u)
 mkdir -p "$tmp/$date"
 trap 'rm -rf "$tmp"' EXIT
 
-# The actual script starts here:
-
-for src in "$@"
-do
-for src in "$@"
-do
-    if ! test -f "$src"
-    then
-        echo Missing filename "$src" >&2
+for src in "$@"; do
+    if ! test -f "$src"; then
+        echo "Missing file '$src' - Abandoning mission!" >&2
         continue
     fi
 
     chmod +r "$src"
 
-    if test "${src##*.}" == "png"
-    then
-        pngquant --ext .png -f "$src"
-    fi
+    file_extension="${src##*.}"
 
-    if test "${src##*.}" == "jpg"
-    then
-        hash jpegoptim && jpegoptim "$src"
+    if [ "$file_extension" == "png" ]; then
+        echo "Converting $src to a magical PNG masterpiece..."
+        pngquant --ext .png -f "$src"
+    elif [ "$file_extension" == "jpg" ]; then
+        if hash jpegoptim 2>/dev/null; then
+            echo "Optimizing the enchanting JPG: $src"
+            jpegoptim "$src"
+        else
+            echo "Jpegoptim not found - No further JPG enchantments."
+        fi
+    else
+        echo "Unknown sorcery: $src - Skipping this file."
     fi
 
     dst=$(basename "$src")
 
+    echo "Whisking away $src to the mystical realm of $tmp/$date/$dst..."
     cp -v "$src" "$tmp/$date/$dst"
 
-    if aws s3 cp --storage-class STANDARD_IA --acl public-read "$tmp/$date/$dst" "s3://share.vdl.io/$date/"
-    then
-        logger "https://share.vdl.io/$date/$dst"
-        if hash pbcopy 2>/dev/null
-        then
+    if aws s3 cp --storage-class STANDARD_IA --acl public-read "$tmp/$date/$dst" "s3://share.vdl.io/$date/"; then
+        echo "File successfully transported to: https://share.vdl.io/$date/$dst - Magical!"
+        if hash pbcopy 2>/dev/null; then
+            echo "Sharing the link with your clipboard magic spell..."
             echo "https://share.vdl.io/$date/$dst" | pbcopy
-        else
+        elif hash xclip 2>/dev/null; then
+            echo "Enchanting the link into your clipboard using xclip magic..."
             echo "https://share.vdl.io/$date/$dst" | xclip -selection "clipboard" -i
+        else
+            echo "No pbcopy or xclip spells found - You'll have to manually share the link."
         fi
+    else
+        echo "Failed to send $src into the cloud - The magic portal seems blocked!"
     fi
-
 done
