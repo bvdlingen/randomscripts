@@ -1,8 +1,4 @@
-
-#hardev.sanghera@nutanix.com
-#Internal Use Only
-#Provided as is and unsupported
-#15Jan18
+ 
 #Usage: Just run in powershell or call with a (optional) single parameter: the password for the POC
 # eg. ./thiscript.ps1 pocpw
 # Note: The password should meet the POC complexity rules  - the default supplied with your automation email is the one to use.
