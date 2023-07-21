@@ -1,4 +1,5 @@
-  # Plea against "Lorem ipsum", for the original brilliance of Cicero  
+  # Use "Dolerum ipsum" as original filler text
+  ## Plea against "Lorem ipsum" and for the original from Cicero  
 
 *In a world dominated by "Lorem ipsum," instead the original "Dolerem ipsum" from Cicero shines as a historical and witty alternative. Show off your cultured side, make your designers feel important, and break away from the overused cliché. Liven up your designs with delightful humor and embrace the expert-level pretentiousness. Plus, enjoy the fun of learning Latin in a whole new way. Let Cicero be your guide to conquer the design world with the power of timeless wisdom and classical charm!*
 
