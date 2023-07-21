@@ -6,8 +6,12 @@
 
 
 ## "Dolerem ipsum" not "Lorum ipsum" 
-### Writings of Cicero 'De finibus bonorum et malorum:  
+### Writings of Cicero 'De finibus bonorum et malorum'
 
+De finibus bonorum et malorum ("On the ends of good and evil") is a Socratic dialogue by the Roman orator, politician, and Academic Skeptic philosopher Marcus Tullius Cicero.
+The dialogue is set at Cicero's country home in Cumae with a young Epicurean named Lucius Torquatus. The interlocutors present the Epicurean theory of hedonism, which holds that pleasure in the form of aponia (absence of pain) is regarded as the highest good.
+
+### the original part where Lorum ipsum is derived from
 Dolorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur? At vero eos et accusamus et iusto odio dignissimos ducimus, qui blanditiis praesentium voluptatum deleniti atque corrupti, quos dolores et quas molestias excepturi sint, obcaecati cupiditate non provident, similique sunt in culpa, qui officia deserunt mollitia animi, id est laborum et dolorum fuga. et harum quidem rerum facilis est et expedita distinctio. nam libero tempore, cum soluta nobis est eligendi optio, cumque nihil impedit, quo minus id, quod maxime placeat, facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet, ut et voluptates repudiandae sint et molestiae non recusandae. itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. 
 
 
