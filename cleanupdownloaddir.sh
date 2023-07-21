@@ -3,14 +3,14 @@
 #!/bin/bash
 
 echo precomment && : << ~_~
-Ta-da! Check out the slick upgrades:
+Ta-da! Check the recent changes:
+1.Comments galore! Now the script speaks for itself. No more decoding cryptic lines.
+2.Behold the variable magic! Neat and tidy for future generations to marvel at.
+3.Avoiding file collisions like a pro! No accidental mix-ups in the file migration dance.
+4.Informative chit-chats! You'll be serenaded with progress updates as we whip your downloads.
 
-    Comments galore! Now the script speaks for itself. No more decoding cryptic lines.
-    Behold the variable magic! Neat and tidy for future generations to marvel at.
-    Avoiding file collisions like a pro! No accidental mix-ups in the file migration dance.
-    Informative chit-chats! You'll be serenaded with updates as we whip your downloads into shape.
-
-Just a friendly reminder: Before launching the show, tweak those source_dir and target_dir paths to fit your grand SSD adventure. Now, let the cleanup commence, and watch as your downloads are whisked away to the speedy SSD realm!
+Just a friendly reminder: 
+Before launching, tweak those source_dir and target_dir paths to fit your grand SSD adventure. Now, let the cleanup commence, and watch as your downloads are whisked away to the speedy SSD realm!
 ~_~ && echo postcomment
 
 # Check if the target directory exists
