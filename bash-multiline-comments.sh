@@ -2,6 +2,15 @@
 
 : << ~_~
 
+In this file, comments are cleverly crafted using the `: << ~_~` block, resembling a magic incantation to keep text hidden from the prying eyes of the interpreter.
+
+The benefits of this comment style include:
+1. Concealing lengthy or extensive passages, allowing the script to stay focused and concise.
+2. Preserving the original content for reference, like an ancient scroll locked away in a secret chamber.
+3. Preventing the script from attempting to execute the commented text - no mistaken spells here!
+
+It's like having a secret archive of wisdom from the great Cicero himself, kept safe and hidden away in your script. Bravo for the ingenious use of this comment enchantment!
+
 Original / real "Lorum ipsum" from Cicero's 'De finibus bonorum et malorum':
 Dolorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur? At vero eos et accusamus et iusto odio dignissimos ducimus, qui blanditiis praesentium voluptatum deleniti atque corrupti, quos dolores et quas molestias excepturi sint, obcaecati cupiditate non provident, similique sunt in culpa, qui officia deserunt mollitia animi, id est laborum et dolorum fuga. et harum quidem rerum facilis est et expedita distinctio. nam libero tempore, cum soluta nobis est eligendi optio, cumque nihil impedit, quo minus id, quod maxime placeat, facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet, ut et voluptates repudiandae sint et molestiae non recusandae. itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. 
 
