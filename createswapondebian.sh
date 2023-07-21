@@ -20,15 +20,20 @@ This script creates a 1GB swapfile and enables it.
 
 ~_~
 
-swapfile=$(readlink -f /mnt/1GB.swap)
 
-fallocate -l 1G -o $swapfile
+swapfile_size=1G
+swapfile_path="/mnt/1GB.swap"
+vm_swappiness=10
+
+swapfile=$(readlink -f $swapfile_path)
+
+fallocate -l $swapfile_size -o $swapfile
 dd if=/dev/zero of=$swapfile bs=1024 count=1048576 -c
 mkswap -v $swapfile
 chmod 600 $swapfile
 
 swapon $swapfile
-echo '/mnt/1GB.swap  none  swap  sw 0  0' >> /etc/fstab
-sysctl vm.swappiness=10
+echo '$swapfile_path none  swap  sw 0  0' >> /etc/fstab
+sysctl vm.swappiness=$vm_swappiness
 
 exit
